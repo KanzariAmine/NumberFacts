@@ -9,5 +9,9 @@ async function getFact() {
 
   let res =  await fetch(`http://numbersapi.com/${number}`);
   let data = await res.text();
-  console.log(data)
+  //console.log(data)
+  if(number !== ''){
+    fact.style.display = 'block';
+    factText.innerHTML = data
+  }
 }
